@@ -163,10 +163,12 @@ class DepthAI:
             if key in keypress_handler_lut:
                 keypress_handler_lut[key]()
             elif key == ord('c'):
-                if 'jpegout' in stream_names:
+            if 'jpegout' in stream_names:
+                while True:
+                    sleep(3)
                     self.device.request_jpeg()
-                else:
-                    print("'jpegout' stream not enabled. Try settings -s jpegout to enable it")
+            else:
+                print("'jpegout' stream not enabled. Try settings -s jpegout to enable it")
             # RGB manual focus/exposure controls:
             # Control:      key[dec/inc]  min..max
             # exposure time:     i   o    1..33333 [us]
