@@ -36,7 +36,8 @@ Opens window
 ### How to use
 After you run the last command in the installation section, a window should open with live footage of your DepthAI device.
 
-Press the `c` key on your keyboard to begin the finding process
+The finding process wil start 3 seconds after the script starts. After that, it will wait 3 seconds before starting again.
+You can check if it found a license plate in the console
 # Changelogs
 ### 0.0.1
 Initial release
