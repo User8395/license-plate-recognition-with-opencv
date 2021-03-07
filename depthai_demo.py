@@ -19,7 +19,7 @@ check_depthai_version()
 is_rpi = platform.machine().startswith('arm') or platform.machine().startswith('aarch64')
 global args, cnn_model2
 print('Connecting to license-plates.db')
-db = SQL("sqlite:////home/qaqak/depthai/license-plates.db")
+db = SQL("sqlite:///license-plates.db")
 print('Connected!')
 
 class DepthAI:
