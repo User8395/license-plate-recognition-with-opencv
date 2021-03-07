@@ -34,7 +34,7 @@ Made install
 Opens window
 ```
 ### How to use
-After you run the last command in the installation section, a window should open with live footage with your DepthAI device.
+After you run the last command in the installation section, a window should open with live footage of your DepthAI device.
 
 Press the `c` key on your keyboard to begin the finding process
 # Changelogs
