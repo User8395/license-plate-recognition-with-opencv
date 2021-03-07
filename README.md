@@ -11,7 +11,7 @@ Cloned repo
 Installed
 ~/license-plate-recognition-with-opencv $ python3 -m venv venv
 ~/license-plate-recognition-with-opencv $ source venv/bin/activate
-(venv) ~/license-plate-recognition-with-opencv $ python install_requirements.txt
+(venv) ~/license-plate-recognition-with-opencv $ python install_requirements.py
 Installed
 (venv) ~/license-plate-recognition-with-opencv $ sudo apt-get install libopencv-dev libtesseract-dev git cmake build-essential libleptonica-dev
 Installed
