@@ -24,11 +24,11 @@ Cloned repo
 (venv) ~/license-plate-recognition-with-opencv $ cd openalpr/src
 (venv) ~/license-plate-recognition-with-opencv/openalpr/src $ mkdir build
 (venv) ~/license-plate-recognition-with-opencv/openalpr/src $ cd build
-(venv) ~/license-plate-recognition-with-opencv/openalpr/src $ cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc ..
-(venv) ~/license-plate-recognition-with-opencv/openalpr/src $ make
-(venv) ~/license-plate-recognition-with-opencv/openalpr/src $ sudo make install
+(venv) ~/license-plate-recognition-with-opencv/openalpr/src/build $ cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc ..
+(venv) ~/license-plate-recognition-with-opencv/openalpr/src/build $ make
+(venv) ~/license-plate-recognition-with-opencv/openalpr/src/build $ sudo make install
 Made install
-(venv) ~/license-plate-recognition-with-opencv/openalpr/src $ cd ../../
+(venv) ~/license-plate-recognition-with-opencv/openalpr/src $ cd ../../../
 (venv) ~/license-plate-recognition-with-opencv $ sudo rm -r openalpr
 (venv) ~/license-plate-recognition-with-opencv $ python3 depthai_demo.py -cnn vehicle-license-plate-detection-barrier-0106 -s previewout metaout jpegout
 Opens window
