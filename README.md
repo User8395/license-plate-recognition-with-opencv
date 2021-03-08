@@ -3,11 +3,12 @@ This repo will help use your DepthAI device to find and take pictures of license
 ### Installation
 Run these commands (the text after the $'s) in order
 ```
+~ $ sudo apt install git
+[sudo] password for user
 ~ $ git clone https://github.com/qaqak/license-plate-recognition-with-opencv.git
 Cloned repo
 ~ $ cd license-plate-recognition-with-opencv
 ~/license-plate-recognition-with-opencv $ sudo apt install python3-venv
-[sudo] password for user: 
 Installed
 ~/license-plate-recognition-with-opencv $ python3 -m venv venv
 ~/license-plate-recognition-with-opencv $ source venv/bin/activate
@@ -18,7 +19,7 @@ These curl/wget commands will vary based on your system
 (venv) ~/license-plate-recognition-with-opencv $ sudo wget -qO- http://docs.luxonis.com/_static/install_dependencies.sh | bash # Debian/Ubuntu
 (venv) ~/license-plate-recognition-with-opencv $ python install_requirements.py
 Installed
-(venv) ~/license-plate-recognition-with-opencv $ sudo apt-get install libopencv-dev libtesseract-dev git cmake build-essential libleptonica-dev liblog4cplus-dev libcurl3-dev beanstalkd
+(venv) ~/license-plate-recognition-with-opencv $ sudo apt-get install libopencv-dev libtesseract-dev cmake build-essential libleptonica-dev liblog4cplus-dev libcurl3-dev beanstalkd
 Installed
 (venv) ~/license-plate-recognition-with-opencv $ git clone https://github.com/openalpr/openalpr.git
 Cloned repo
