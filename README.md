@@ -11,7 +11,8 @@ Cloned repo
 Installed
 ~/license-plate-recognition-with-opencv $ python3 -m venv venv
 ~/license-plate-recognition-with-opencv $ source venv/bin/activate
-(venv) ~/license-plate-recognition-with-opencv $ # These curl/wget command will vary based on your system
+
+These curl/wget commands will vary based on your system
 (venv) ~/license-plate-recognition-with-opencv $ bash -c "$(curl -fL http://docs.luxonis.com/_static/install_dependencies.sh)" # macOS
 (venv) ~/license-plate-recognition-with-opencv $ sudo curl -fL http://docs.luxonis.com/_static/install_dependencies.sh | bash # 
 (venv) ~/license-plate-recognition-with-opencv $ sudo wget -qO- http://docs.luxonis.com/_static/install_dependencies.sh | bash # Debian/Ubuntu
