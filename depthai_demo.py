@@ -162,19 +162,16 @@ class DepthAI:
             }
             if key in keypress_handler_lut:
                 keypress_handler_lut[key]()
-            elif key == ord('c'):
-                if 'jpegout' in stream_names:
-                    while True:
-                        sleep(3)
-                        self.device.request_jpeg()
-                else:
-                    print("'jpegout' stream not enabled. Try settings -s jpegout to enable it")
+            if 'jpegout' in stream_names:
+                self.device.request_jpeg()
+            else:
+                print("'jpegout' stream not enabled. Try settings -s jpegout to enable it")
             # RGB manual focus/exposure controls:
             # Control:      key[dec/inc]  min..max
             # exposure time:     i   o    1..33333 [us]
             # sensitivity iso:   k   l    100..1600
             # focus:             ,   .    0..255 [far..near]
-            elif key == ord('i') or key == ord('o') or key == ord('k') or key == ord('l'):
+            if key == ord('i') or key == ord('o') or key == ord('k') or key == ord('l'):
                 self.rgb_exp = getattr(self, 'rgb_exp', 20000)  # initial
                 self.rgb_iso = getattr(self, 'rgb_iso', 800)  # initial
                 rgb_iso_step = 50
@@ -347,12 +344,18 @@ class DepthAI:
                             db.execute("INSERT INTO plates (platenum, time) VALUES (?, datetime('now', '-5 hours'))", data["results"][0]["plate"])
                             print("Removing picture")
                             os.system("rm -f plate.png json")
+                            print("Waiting")
+                            sleep(3)
+                            self.device.request_jpeg()
                         else:
                             print("No plate found")
                             print("Either there is no plate, or the device is too far")
                             print("Bring the device close to a plate so that it is noticed")
                             print("Removing picture")
                             os.system("rm -f plate.png json")
+                            print("Waiting")
+                            sleep(3)
+                            self.device.request_jpeg()
 
                 elif packet.stream_name == 'video':
                     videoFrame = packetData

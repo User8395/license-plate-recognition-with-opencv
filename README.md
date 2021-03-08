@@ -40,10 +40,12 @@ Opens window
 ### How to use
 After you run the last command in the installation section, a window should open with live footage of your DepthAI device.
 
-The finding process wil start 3 seconds after the script starts. After that, it will wait 3 seconds before starting again.
+The finding process wil start right after the script starts. After that, it will wait 3 seconds before starting again.
 You can check if it found a license plate in the console
 # Changelogs
+### 0.0.2
+Startup script called `start.sh
 ### 0.0.1
 Initial release
-# Upcoming in 0.0.2
-Startup script called `start.sh`
+# Upcoming in 0.0.3
+Installer.sh
