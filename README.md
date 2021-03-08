@@ -1,5 +1,5 @@
 # License Plate Recognition with OpenCV
-This repo will help use your DepthAI device to find and take pictures of license plates
+This repo will help use your DepthAI device to find and take pictures of license plates on Linux
 ### Installation
 Run these commands (the text after the $'s) in order
 ```
@@ -34,7 +34,7 @@ Cloned repo
 Made install
 (venv) ~/license-plate-recognition-with-opencv/openalpr/src $ cd ../../../
 (venv) ~/license-plate-recognition-with-opencv $ sudo rm -r openalpr
-(venv) ~/license-plate-recognition-with-opencv $ python3 depthai_demo.py -cnn vehicle-license-plate-detection-barrier-0106 -s previewout metaout jpegout
+(venv) ~/license-plate-recognition-with-opencv $ sh start.sh
 Opens window
 ```
 ### How to use
@@ -44,8 +44,15 @@ The finding process wil start right after the script starts. After that, it will
 You can check if it found a license plate in the console
 # Changelogs
 ### 0.0.2
-Startup script called `start.sh
+Startup script called `start.sh`
 ### 0.0.1
 Initial release
 # Upcoming in 0.0.3
 Installer.sh
+# FAQs
+### Can I run this on Windows?
+Yes. With [Oracle VM VirtualBox](https://virtualbox.org) and the VirtualBox Extension pack, you can run Linux in a virtual machine and give the VM access to the USB port holding the DepthAI device. Just install a Linux distrubution of your choice in the VM and follow the steps in the installation section
+### What do I do if I get an error `bash: git: command not found` or `bash: python: command not found` or `bash: apt: command not found`?
+`bash: git: command not found` and `bash: python: command not found`: That means you need to install Git and Python via APT or your other package manager
+
+`bash: apt: command not found`: Different Linux distros have different package managers. Debian, Ubuntu, and macOS use APT. Fedora, CentOS, and RedHat use Yum. Alpine Linux uses Pacman. openSUSE uses Zypper. To install the packages, run the APT commands above and replace `apt` with `yum` or `pacman` or `zypper`.
