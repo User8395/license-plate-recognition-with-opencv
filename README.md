@@ -4,7 +4,7 @@ This repo will help use your DepthAI device to find and take pictures of license
 Run these commands (the text after the $'s) in order
 ```
 ~ $ sudo apt install git
-[sudo] password for user
+[sudo] password for user:
 ~ $ git clone https://github.com/qaqak/license-plate-recognition-with-opencv.git
 Cloned repo
 ~ $ cd license-plate-recognition-with-opencv
